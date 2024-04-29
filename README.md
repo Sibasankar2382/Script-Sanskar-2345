@@ -1,5 +1,5 @@
 # NIFTY50_Stock_Price_Prediction  
-![Screenshot (392)](https://github.com/mdkamran048/NIFTY50_Stock_Price_Prediction/assets/143988392/8f9404db-b86e-47ca-82c6-b05277f21738)
+![image](https://github.com/kteshubham256/Script-Sanskar-2345/assets/148578267/7a2efc15-8a2d-43a3-a9b2-5b73b71a630e)
 
 
 This project centers around the prediction of stock prices for NIFTY-50 stocks, employing a robust model trained on a comprehensive dataset spanning four years of historical data. Users have the flexibility to input their stock preferences, specify quantities, and designate buying and selling dates, enabling thorough portfolio analysis. Whether forecasting future prices or leveraging historical data, the model efficiently computes the portfolio's returns. Furthermore, seamless integration with Google Sheets enhances user convenience, offering a potent tool for investors to make well-informed decisions and conduct insightful analyses of their investments.
@@ -7,10 +7,12 @@ This project centers around the prediction of stock prices for NIFTY-50 stocks, 
 ## Folder Structure
 | Files | Description |
 |-------| ------------|
-| **NIFTY50_Stocks_Data** | This folder includes raw datasets, as well as the merged data used for model creation and analysis. |
-| **NIFTY50_Stocks_Gsheet** | This folder houses all files related to Google Sheets integration, including the model and datasets. |
-| **NIFTY50_Web-Scraping** |  "Web_Scraping" folder comprises an IPython Notebook (IPYNB) file for web scraping purposes. |
+| **NIFTY50_Stocks_Data_ipynb** | This folder includes raw datasets, as well as the merged data used for model creation and analysis
+Also this folder houses all files related to Google Sheets integration, including the model and datasets. |
+| **stock_model_joblib** | This file has trained model which we used for the prediction. |
+| **NIFTY50_stock_list_csv** |  This file has all nifty-50 stock list. |
 | **README.md** | "README.md" serves as the project's informational documentation. |
+| **HTML_CSS_JS** |  This files have all the frontend code for webpage. |
 
 ## Introduction  
 - As an investment advisor, our goal with this project was to forecast future prices of Nifty50 stocks using advanced machine learning algorithms.
@@ -49,8 +51,8 @@ This project centers around the prediction of stock prices for NIFTY-50 stocks, 
 
 ## Preprocessing
 
-**Web Scraping:**  
-- Data sourced exclusively from official and reputable websites, including "https://in.investing.com/".
+**Data Collection :**  
+- Data sourced exclusively from official and reputable websites, including "https://finance.yahoo.com/".
 - Four years of NIFTY50 stock information extracted meticulously to ensure dataset reliability and credibility.
 
 **Null and Noise Handling:** 
@@ -70,13 +72,13 @@ This project centers around the prediction of stock prices for NIFTY-50 stocks, 
 - Enables precise selection and extraction of data relevant to users' preference of stock for predicting profit or loss based on specific buying and selling dates.
 
 **Cleaned Data**  
-![Screenshot (393)](https://github.com/mdkamran048/NIFTY50_Stock_Price_Prediction/assets/143988392/469761d2-8eca-428c-9a7f-8f1faf25b266)
+![image](https://github.com/kteshubham256/Script-Sanskar-2345/assets/148578267/288f1925-43af-48c1-9933-15b775dd5dfc)
+
 
 
 By executing these preprocessing steps, the dataset was refined, cleaned, and made ready for further analysis, establishing a solid foundation for accurate prediction.
 
 ## Model Building
-![Screenshot (394)](https://github.com/mdkamran048/NIFTY50_Stock_Price_Prediction/assets/143988392/7008ccd3-1210-49e3-a8a5-dd28e3b7565b)
 
 - Our machine learning model employs polynomial regression for predicting profit/loss in Nifty50 stocks.
 - The precision of these predictions aids investors in making well-informed decisions.
@@ -85,28 +87,6 @@ By executing these preprocessing steps, the dataset was refined, cleaned, and ma
 - This project serves as a tangible demonstration of how Artificial Intelligence and Machine Learning can be applied to real-world financial analysis, showcasing their 
   practical utility in the field.
 
-## Google Sheet Integration
-<pre><code>
-# Importing Dataset
-all_data=pd.read_excel('D:/Data Analyst Course/Project_Nifty50/NIFTY50_Stocks_data.xlsx')
-
-# Setting parameters
-scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('chromatic-pride-392908-ccf371b70a0f.json', scope)
-client = gspread.authorize(credentials)
-
-sheet_key = '1-biUonUrbRltqeXIadCUyGpHItCDvljh4JuukYqEODk'
-sheet = client.open_by_key(sheet_key)
-
-worksheet = sheet.get_worksheet(0)
-</code></pre>
-
-![Screenshot (395)](https://github.com/mdkamran048/NIFTY50_Stock_Price_Prediction/assets/143988392/201b4698-fc9b-48cf-8f2a-db074baf8b87)
-
-
-- Integrated our machine learning model directly into Google Sheets for effortless stock analysis.
-- It allows users to input Stock name, quantity, buying  and selling dates.
-- Our model will instantly calculates whether they would make a profit or incur a loss based on historical data and predictions.
 
 ## Model Application
 
@@ -120,7 +100,8 @@ worksheet = sheet.get_worksheet(0)
 - Validating Existing Strategies  
 - Future Applications
   
-![Screenshot (396)](https://github.com/mdkamran048/NIFTY50_Stock_Price_Prediction/assets/143988392/a86b1363-6631-4817-886e-c9e1b2c30358)
+![image](https://github.com/kteshubham256/Script-Sanskar-2345/assets/148578267/bb27ceb7-22ed-45c7-a75a-2f019e5fb068)
+
 
 
 - Our model will leverages the power of data and machine learning to empower investors and traders with valuable insights, fostering data-driven decision-making and enhancing overall performance in the financial sector.
@@ -154,7 +135,7 @@ worksheet = sheet.get_worksheet(0)
   solutions for efficient data management within the model.
 
 ## Learning
-**Web Scraping Mastery:**  
+**Data collection from yfinance:**  
 - Attained a high level of competence in web scraping techniques, enabling efficient and reliable data acquisition from online sources, notably exemplified by NIFTY50 stock price data extraction.
 
 **Data Preprocessing Expertise:**  
