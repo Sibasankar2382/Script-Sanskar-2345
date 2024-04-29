@@ -7,8 +7,7 @@ This project centers around the prediction of stock prices for NIFTY-50 stocks, 
 ## Folder Structure
 | Files | Description |
 |-------| ------------|
-| **NIFTY50_Stocks_Data_ipynb** | This folder includes raw datasets, as well as the merged data used for model creation and analysis Also this folder houses all files 
-                                | related to Google Sheets integration, including the model and datasets. |                                
+| **NIFTY50_Stocks_Data_ipynb** | this folder houses all python codes with functions, from data collection to model creation.|
 | **stock_model_joblib** | This file has trained model which we used for the prediction. |
 | **NIFTY50_stock_list_csv** |  This file has all nifty-50 stock list. |
 | **README.md** | "README.md" serves as the project's informational documentation. |
